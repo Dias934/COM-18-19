@@ -3,7 +3,7 @@ function mobile_ring_tones()
     N=3;
     Fs=8000;
     duration=3;
-    a=[1;1;1];
+    a=[1;1;1]; %pode-se alterar o volume (amplitude) das gravações
     s=zeros(N,duration*Fs);
     for i=1:N
         disp('recoding');
