@@ -1,0 +1,20 @@
+
+Descriptor for QPSKstr.mat
+
+Modulation type: QPSK
+
+Bit splitter:
+Most  significant bit with cos() carrier
+Least significant bit with sin() carrier
+
+Constellation:
+00 = -cos() -sin()
+01 = -cos() +sin()
+10 = +cos() -sin()
+11 = +cos() +sin()
+
+Modulation parameters:
+Fs = 80000 Hz    (sampling frequency - samples/s)
+Rb = 1000  bit/s (bit rate  [bits per second])
+F0 = 4xRb  Hz    (carrier frequency)
+Eb = 1     J     (bit average energy)    
