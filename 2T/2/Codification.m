@@ -7,9 +7,5 @@ function [s,t,messageStuffed] = Codification(A,Rb,L,Fs,message)
     for i=1:length(messageStuffed)
         s((i-1)*Fs+1:i*Fs)=generatePulse(A,messageStuffed(i),Fs);
     end
-    figure;
-    plot(t,s);
-    xlim([0-Tb t(end)+Tb]);
-    ylim([-1.1*A 1.1*A]);
 end
 
