@@ -8,7 +8,7 @@ function received = Descodification(s,t,A,Rb,L,Fs)
             count=0;
         else
             pulse=s((i-1)*Fs+1:i*Fs);
-            En=pulse*Tb;
+            En=pulse.*Tb;
             if En>0
                 if value==1
                     count=count+1;

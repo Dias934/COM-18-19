@@ -14,6 +14,10 @@ fprintf("Message:[%s]\n",aux);
 aux=sprintf("%d",coded);
 fprintf("Message sent:[%s]\n\n",aux);
 
+
+figure;
+plot(t,s);
+
 A=3.3;
 Rb=100;
 L=6;
@@ -24,3 +28,7 @@ aux=sprintf("%d",send);
 fprintf("Message:[%s]\n",aux);
 aux=sprintf("%d",coded);
 fprintf("Message sent:[%s]\n",aux);
+
+
+figure;
+plot(t,s);
