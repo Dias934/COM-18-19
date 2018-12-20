@@ -11,6 +11,8 @@
 %
 function [p,s1,s2,t]=notes(Fi,dur,dir,init_F,end_F,Fs)
 
+% Definir a frequencia de amostragem (em Hz).
+Fs = 5000;
 p=audioplayer.empty(8,0);
 % O vetor com o numero total de pontos.
 n = 1 : 1 : Fs*dur;

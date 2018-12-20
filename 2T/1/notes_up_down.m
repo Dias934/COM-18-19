@@ -127,6 +127,7 @@ function upScaleButton_Callback(hObject, eventdata, handles)
 handles.downScaleButton.Enable='Off';
 init=0;
 end_f=20000;
+Fs=8000;
 if(handles.FilterType.Value==2)
     init=0;
     end_f=str2num(handles.FR_IN.String);
@@ -136,7 +137,7 @@ elseif(handles.FilterType.Value==3)
     init=fo-(LB/2);
     end_f=fo+(LB/2);
 end
-[p,s1,s2,t]=notes(handles.frequencyMenu.UserData(handles.frequencyMenu.Value),handles.durationMenu.Value,1,init,end_f);
+[p,s1,s2,t]=notes(handles.frequencyMenu.UserData(handles.frequencyMenu.Value),handles.durationMenu.Value,1,init,end_f,Fs);
 if(handles.FilterType.Value<2);
     analyze(s1,t);
 else
@@ -153,6 +154,9 @@ function downScaleButton_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 handles.upScaleButton.Enable='Off';
+init=0;
+end_f=20000;
+Fs=8000;
 if(handles.FilterType.Value==2)
     init=0;
     end_f=str2num(handles.FR_IN.String);
@@ -162,7 +166,7 @@ elseif(handles.FilterType.Value==3)
     init=fo-(LB/2);
     end_f=fo+(LB/2);
 end
-[p,s1,s2,t]=notes(handles.frequencyMenu.UserData(handles.frequencyMenu.Value),handles.durationMenu.Value,-1,init,end_f);
+[p,s1,s2,t]=notes(handles.frequencyMenu.UserData(handles.frequencyMenu.Value),handles.durationMenu.Value,-1,init,end_f,Fs);
 if(handles.FilterType.Value<2);
     analyze(s1,t);
 else

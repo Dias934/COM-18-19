@@ -1,10 +1,10 @@
-function analyze(s,t)
+function analyze(s,t,Fs)
     figure;
     plot(t,s);
     grid on;
     title('Sinal');
     
-    Fs=1000;
+    Fs=5000;
     CK = fftshift( fft(s) );  
     CK = CK / length(s);
     freq = ((0 : 1 : length(s)-1)*Fs / ( length(s) )) - Fs/2;
