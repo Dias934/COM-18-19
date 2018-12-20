@@ -14,13 +14,13 @@ aux=aux+noise;
 received=Descodification(aux,t,A,Rb,L,Fs);
 
 
-aux=sprintf("%d",send);
-fprintf("First Message \n");
-fprintf("Message:[%s]\n",aux);
-aux=sprintf("%d",coded);
-fprintf("Message sent:[%s]\n",aux);
-aux=sprintf("%d",received);
-fprintf("Message received:[%s]\n",aux);
+aux=sprintf('%d',send);
+fprintf('First Message \n');
+fprintf('Message:[%s]\n',aux);
+aux=sprintf('%d',coded);
+fprintf('Message sent:[%s]\n',aux);
+aux=sprintf('%d',received);
+fprintf('Message received:[%s]\n',aux);
  
 figure;
 plot(t,s);

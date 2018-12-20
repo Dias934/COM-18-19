@@ -10,5 +10,5 @@ A = 5;
 figure;
 plot(t,s);
 received=receiverQPSK(s,t,Rb,Fs,F0,A);
-aux=sprintf("%d",received);
-fprintf("Message received:[%s]\n\n",aux);
+aux=sprintf('%d',received);
+fprintf('Message received:[%s]\n\n',aux);

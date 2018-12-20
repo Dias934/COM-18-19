@@ -127,7 +127,7 @@ function upScaleButton_Callback(hObject, eventdata, handles)
 handles.downScaleButton.Enable='Off';
 init=0;
 end_f=20000;
-Fs=8000;
+Fs=1000;
 if(handles.FilterType.Value==2)
     init=0;
     end_f=str2num(handles.FR_IN.String);
@@ -156,7 +156,7 @@ function downScaleButton_Callback(hObject, eventdata, handles)
 handles.upScaleButton.Enable='Off';
 init=0;
 end_f=20000;
-Fs=8000;
+Fs=1000;
 if(handles.FilterType.Value==2)
     init=0;
     end_f=str2num(handles.FR_IN.String);
