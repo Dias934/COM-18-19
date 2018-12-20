@@ -22,11 +22,11 @@ if dir>0
     for i=1 : 8
         W = 2*pi*(Fi/Fs);
         Signal = cos( W * n );
-        s1((i-1)*Fs+1:i*Fs)=Signal;
+        s1((i-1)*Fs*dur+1:i*Fs*dur)=Signal;
         if(Fi<init_F || Fi>end_F)
             Signal=zeros(1,length(n));
         end
-        s2((i-1)*Fs+1:i*Fs)=Signal;
+        s2((i-1)*Fs*dur+1:i*Fs*dur)=Signal;
         p(i)=audioplayer( Signal, Fs );
         Fi = Fi * power(2,1/12);    
     end
@@ -37,11 +37,11 @@ else
     for i=1 : 8       
         W = 2*pi*(Fi/Fs);
         Signal = cos( W * n );
-        s1((i-1)*Fs+1:i*Fs)=Signal;
+        s1((i-1)*Fs*dur+1:i*Fs*dur)=Signal;
         if(Fi<init_F || Fi>end_F)
             Signal=zeros(1,length(n));
         end
-        s2((i-1)*Fs+1:i*Fs)=Signal;
+        s2((i-1)*Fs*dur+1:i*Fs*dur)=Signal;
         p(i)=audioplayer( Signal, Fs );
         Fi = Fi / power(2,1/12);    
 
