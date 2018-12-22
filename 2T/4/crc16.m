@@ -1,7 +1,9 @@
-function [outputArg1,outputArg2] = crc16(inputArg1,inputArg2)
-%CRC16 Summary of this function goes here
-%   Detailed explanation goes here
-outputArg1 = inputArg1;
-outputArg2 = inputArg2;
+function [ret,Synd] = crc16(message,G,q,operation)
+    Synd=[];
+    if operation>0
+        ret=crc16Codification(message,G,q);
+    else
+        [ret,Synd]=crc16Descodification(message,G,q);
+    end
 end
 

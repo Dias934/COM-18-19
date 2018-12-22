@@ -1,7 +1,5 @@
-function [message] = receiverQPSK(s,t,Rb,Fs,F0,A)
-    Ts=1/Rb;
+function [message] = receiverQPSK(s,t,Fs,F0)
     message=[];
-    idx=1;
     for i=1:length(s)/Fs
         t_aux=t((i-1)*Fs+1:i*Fs);
         simbol=s((i-1)*Fs+1:i*Fs);
